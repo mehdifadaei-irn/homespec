@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+    <g id="control" transform="translate(-1.5 -1.5)">
+        <path id="Path_1579" data-name="Path 1579"
+            d="M31.5,24A7.5,7.5,0,1,0,24,31.5,7.5,7.5,0,0,0,31.5,24Zm-12,0A4.5,4.5,0,1,1,24,28.5,4.5,4.5,0,0,1,19.5,24Z"
+            fill="#354e37" />
+        <path id="Path_1580" data-name="Path 1580"
+            d="M15,37.311,23,46.5h2l8-9.189V34.5H15Zm13.859.189L24,43.082,19.141,37.5Z"
+            fill="#354e37" />
+        <path id="Path_1581" data-name="Path 1581"
+            d="M23,1.5l-8,9.189V13.5H33V10.689L25,1.5Zm-3.856,9L24,4.918,28.859,10.5Z"
+            fill="#354e37" />
+        <path id="Path_1582" data-name="Path 1582"
+            d="M1.5,23v2l9.189,8H13.5V15H10.689Zm9,5.861L4.918,24,10.5,19.141Z" fill="#354e37" />
+        <path id="Path_1583" data-name="Path 1583"
+            d="M37.311,15H34.5V33h2.811L46.5,25V23ZM37.5,28.859V19.141L43.082,24Z" fill="#354e37" />
+    </g>
+</svg>
+  

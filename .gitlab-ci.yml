@@ -1,0 +1,36 @@
+stages:
+  - install
+  - build
+  - deploy
+
+before_script:
+  - npm install -g pm2
+
+install:
+  stage: install
+  script:
+    - npm ci
+  tags:
+    - ubuntu
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - .next
+  tags:
+    - ubuntu
+
+deploy:
+  stage: deploy
+  script:
+    - pm2 stop all || true
+    - pm2 start npm --name "my-home-spec" -- start
+    - pm2 save
+  tags:
+    - ubuntu
+  environment: production
+  only:
+    - main

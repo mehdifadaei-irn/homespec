@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+  <g id="wrench" transform="translate(0.996 2)">
+    <g id="Rectangle_738" data-name="Rectangle 738" transform="translate(-0.996 -2)" fill="rgba(255,255,255,0)" stroke="#354e37" stroke-width="0.5">
+      <path d="M10,0H51a0,0,0,0,1,0,0V41A10,10,0,0,1,41,51H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" stroke="none"/>
+      <path d="M10,.25H50.75a0,0,0,0,1,0,0V41A9.75,9.75,0,0,1,41,50.75H.25a0,0,0,0,1,0,0V10A9.75,9.75,0,0,1,10,.25Z" fill="none"/>
+    </g>
+    <g id="Decorative_icon" data-name="Decorative icon" transform="translate(6.004 6)">
+      <rect id="Placement_Area" data-name="Placement Area" width="36" height="36" fill="red" opacity="0"/>
+      <g id="Icon">
+        <rect id="Canvas" width="36" height="36" fill="#354e37" opacity="0"/>
+        <path id="Path_1912" data-name="Path 1912" d="M12,6a6,6,0,1,0,6,6A6,6,0,0,0,12,6Z" transform="translate(6 6)" fill="#354e37"/>
+        <path id="Path_1913" data-name="Path 1913" d="M32,6H25.95L22.6,2.326A1,1,0,0,0,21.859,2H12.141a1,1,0,0,0-.739.326L8.05,6H2A1,1,0,0,0,1,7V27a1,1,0,0,0,1,1H32a1,1,0,0,0,1-1V7A1,1,0,0,0,32,6ZM17,24.2A8.2,8.2,0,1,1,25.2,16,8.2,8.2,0,0,1,17,24.2Z" transform="translate(1 2)" fill="#354e37"/>
+      </g>
+    </g>
+  </g>
+</svg>

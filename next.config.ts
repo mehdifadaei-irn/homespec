@@ -3,7 +3,7 @@ import { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["picsum.photos"], // Add other domains here if needed
+    domains: ["picsum.photos", "backend.myhomespec.com"], // Add other domains here if needed
   },
   webpack(config) {
     config.module.rules.push({

@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 import QueryClientProvider from "./QueryClientProvider";
 import NextAuthProvider from "./NextAuthProvider";
 
-const Providers = ({ children }: PropsWithChildren<{}>) => {
+const Providers = ({ children }: PropsWithChildren) => {
   return (
     <NextAuthProvider>
       <QueryClientProvider>{children}</QueryClientProvider>;

@@ -14,7 +14,9 @@ export const useAuth = () => {
   const handleLogin = async (credentials: LoginPayload) => {
     setLoading(true);
     try {
-      const data = await authenticate(credentials);
+      const response = await authenticate(credentials);
+      const data= response.parameters.data
+      
       setTokens(data.access_token, data.expires_in);
       console.log("data", data);
     } catch (error) {
@@ -27,7 +29,8 @@ export const useAuth = () => {
   const handleRegister = async (credentials: RegisterPayload) => {
     setLoading(true);
     try {
-      const data = await authenticate(credentials);
+      const response = await authenticate(credentials);
+      const data= response.parameters.data
       setTokens(data.access_token, data.expires_in);
       console.log("data", data);
     } catch (error) {

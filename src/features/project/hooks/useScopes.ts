@@ -7,7 +7,7 @@ export const useScopes = () => {
     queryKey: ["scopes"],
     queryFn: async () => {
       const { data } = await getAllScopes();
-      return data?.parameters[0];
+      return data?.parameters.data;
     },
 
     enabled: true,

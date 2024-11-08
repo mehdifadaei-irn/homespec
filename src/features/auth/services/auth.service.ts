@@ -1,43 +1,48 @@
 import { httpService } from "@/lib/httpService";
+import { AuthenticateTypes } from "./auth.types";
 
 interface UserDetails {
-    first_name?: string | null;
-    last_name?: string | null;
+  first_name?: string | null;
+  last_name?: string | null;
 }
 
 interface PhoneLogin {
-    phone_number: string;
-    email?: never;
+  phone_number: string;
+  email?: never;
 }
 
 interface EmailLogin {
-    email: string;
-    phone_number?: never;
+  email: string;
+  phone_number?: never;
 }
 
-export type RegisterPayload = (PhoneLogin | EmailLogin) & UserDetails
+export type RegisterPayload = (PhoneLogin | EmailLogin) & UserDetails;
 
 export type LoginPayload = (PhoneLogin | EmailLogin) & {
-    password: string;
+  password: string;
 };
 
-
-export const authenticate = async (credentials: LoginPayload | RegisterPayload) => {
-    const response = await httpService.post('/auth/authenticate', credentials);
-    return response.data;
+export const authenticate = async (
+  credentials: LoginPayload | RegisterPayload
+) => {
+  const response = await httpService.post<AuthenticateTypes>(
+    "/auth/authenticate",
+    credentials
+  );
+  return response.data;
 };
 
 export const logout = async () => {
-    const response = await httpService.post('/auth/logout');
-    return response.data;
+  const response = await httpService.post("/auth/logout");
+  return response.data;
 };
 
 export const refresh = async () => {
-    const response = await httpService.post('/auth/refresh');
-    return response.data;
+  const response = await httpService.post("/auth/refresh");
+  return response.data;
 };
 
 export const identity = async () => {
-    const response = await httpService.post('/auth/user');
-    return response.data;
+  const response = await httpService.post("/auth/user");
+  return response.data;
 };

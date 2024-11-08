@@ -43,9 +43,9 @@ class HttpService {
     this.axiosService.interceptors.request.use(
       async (request) => {
         const session = await getSession();
-        //   const sessionToken = session?.user as sessionUserType;
-        if (session && session.accessToken) {
-          request.headers.Authorization = `Bearer ${session.accessToken}`;
+          const sessionToken = session?.user as sessionUserType;
+        if (session && sessionToken.accessToken) {
+          request.headers.Authorization = `Bearer ${sessionToken.accessToken}`;
         }
         return request;
       },

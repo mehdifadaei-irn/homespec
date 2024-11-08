@@ -8,7 +8,7 @@ import {
 } from "@/components/shadcn/dropdown-menu";
 import Layer from "@/assets/icons/common/layers.svg";
 
-import { ArrowRight2, EyeSlash, Image, Note } from "iconsax-react";
+import { ArrowRight2, EyeSlash } from "iconsax-react";
 import { cn } from "@/lib/utils";
 
 const NavDropDown = () => {

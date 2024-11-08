@@ -18,7 +18,6 @@ export const useAuth = () => {
       const data= response.parameters.data
       
       setTokens(data.access_token, data.expires_in);
-      console.log("data", data);
     } catch (error) {
       console.log("error", error);
     } finally {
@@ -32,7 +31,6 @@ export const useAuth = () => {
       const response = await authenticate(credentials);
       const data= response.parameters.data
       setTokens(data.access_token, data.expires_in);
-      console.log("data", data);
     } catch (error) {
       console.log("error", error);
     } finally {

@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/providers/Providers";
 import { robotoSans } from "@/constants/fonts";
-import ClientOnly from "@/components/ClientOnly";
-
-
 
 export const metadata: Metadata = {
   title: "MyHomeSpec",
@@ -18,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${robotoSans.className} antialiased`}
-      >
+      <body className={`${robotoSans.className} antialiased`}>
         <Providers>
           {/* <DefaultLayout> */}
           {children}

@@ -19,8 +19,6 @@ const Scope = () => {
     }
   };
 
-  console.log("data", data);
-
   return (
     <ProjectPageWrapper submit={() => {}}>
       <div className="max-w-[906px]">

@@ -55,8 +55,7 @@ export function ComboboxForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
-
+    s;
     toast({
       title: "You submitted the following values:",
       description: (
@@ -86,7 +85,7 @@ export function ComboboxForm() {
                       {" "}
                       {field.value
                         ? languages.find(
-                            (language) => language.value === field.value,
+                            (language) => language.value === field.value
                           )?.label
                         : "Select country"}
                       <ChevronDownIcon fontSize={16} color="#464646" />
@@ -119,7 +118,7 @@ export function ComboboxForm() {
                                 "ml-auto h-4 w-4",
                                 language.value === field.value
                                   ? "opacity-100"
-                                  : "opacity-0",
+                                  : "opacity-0"
                               )}
                             />
                           </CommandItem>

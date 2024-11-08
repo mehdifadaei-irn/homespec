@@ -1,3 +1,5 @@
+"use client";
+
 import { useSession } from "next-auth/react";
 import React from "react";
 
@@ -12,21 +14,17 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({
   UnauthComponent,
   LoadingComponent,
 }) => {
+  const { data: session, status } = useSession();
 
-  return <div>
-    loading...
-  </div>
-  // const { data: session, status } = useSession();
+  if (status === "loading" && LoadingComponent) {
+    return <LoadingComponent />;
+  }
 
-  // if (status === "loading" && LoadingComponent) {
-  //   return <LoadingComponent />;
-  // }
+  if (session) {
+    return <AuthComponent />;
+  }
 
-  // if (session) {
-  //   return <AuthComponent />;
-  // }
-
-  // return <UnauthComponent />;
+  return <UnauthComponent />;
 };
 
 export default AuthWrapper;

@@ -3,6 +3,7 @@ import "./globals.css";
 import Providers from "@/providers/Providers";
 import { robotoSans } from "@/constants/fonts";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
+import ClientOnly from "@/components/ClientOnly";
 
 
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Providers>
           {/* <DefaultLayout> */}
           {children}
+          <ClientOnly/>
           {/* </DefaultLayout> */}
         </Providers>
       </body>

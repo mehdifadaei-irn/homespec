@@ -1,4 +1,4 @@
-import { api } from '@/lib/api';
+import { httpService } from "@/lib/httpService";
 
 interface UserDetails {
     first_name?: string | null;
@@ -23,21 +23,21 @@ export type LoginPayload = (PhoneLogin | EmailLogin) & {
 
 
 export const authenticate = async (credentials: LoginPayload | RegisterPayload) => {
-    const response = await api.post('/auth/authenticate', credentials);
+    const response = await httpService.post('/auth/authenticate', credentials);
     return response.data;
 };
 
 export const logout = async () => {
-    const response = await api.post('/auth/logout');
+    const response = await httpService.post('/auth/logout');
     return response.data;
 };
 
 export const refresh = async () => {
-    const response = await api.post('/auth/refresh');
+    const response = await httpService.post('/auth/refresh');
     return response.data;
 };
 
 export const identity = async () => {
-    const response = await api.post('/auth/user');
+    const response = await httpService.post('/auth/user');
     return response.data;
 };

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
@@ -39,6 +39,9 @@ const Spinner: React.FC = () => (
 
 const MapCenter: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
   const map = useMap();
+  if (map != undefined) {
+    map.remove();
+  }
 
   useEffect(() => {
     const center: LatLngExpression = [lat, lng];

@@ -1,9 +1,9 @@
 import React from "react";
 import GroundFloorNav from "../../components/GroundFloorNav";
-import ThreeDCanvas from "@/components/ThreeD/ThreeDCanvas.jsx";
+import ThreeDCanvas from "@/components/ThreeD/ThreeDCanvas";
 import { planSpaces } from "../index.types";
-import GroundFloorBottomSections from "../../components/GroundFloorBottomSections";
-import { Separator } from "@/components/shadcn/separator";
+// import GroundFloorBottomSections from "../../components/GroundFloorBottomSections";
+// import { Separator } from "@/components/shadcn/separator";
 
 type Props = {
   sideDataItemHovered: string | null;
@@ -38,7 +38,7 @@ const GroundFloor = ({
           is3dModal={is3dModal}
         />
       </div>
-      <div className="flex w-full border-t-[1.5px] border-oslo-gray ">
+      {/* <div className="flex w-full border-t-[1.5px] border-oslo-gray ">
         <GroundFloorBottomSections
           title="Material"
           icon="earth"
@@ -74,7 +74,7 @@ const GroundFloor = ({
         <div className="flex-grow">
           <h1>helo</h1>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

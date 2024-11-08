@@ -1,6 +1,5 @@
-"use client";
 import React, { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "@/lib/leaflet";
@@ -39,9 +38,6 @@ const Spinner: React.FC = () => (
 
 const MapCenter: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
   const map = useMap();
-  if (map != undefined) {
-    map.remove();
-  }
 
   useEffect(() => {
     const center: LatLngExpression = [lat, lng];
@@ -71,7 +67,6 @@ const LeafletMap: React.FC<LeafletMapProps> = ({ lat, lng }) => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {/* <Marker position={center} /> */}
           {!loading && lat && lng && <MapCenter lat={lat} lng={lng} />}
         </MapContainer>
       </div>

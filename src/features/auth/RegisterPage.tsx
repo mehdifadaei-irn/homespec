@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import heroImage from "@/features/homepage/assets/images/main-hero.webp";
 import RoundedSquare from "@/components/RoundedSquare";
@@ -11,7 +13,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const getSchema = (isPhoneNumber:boolean) => {
+const getSchema = (isPhoneNumber: boolean) => {
   return z.object({
     firstName: z.string().min(1, "First name is required"),
     lastName: z.string().min(1, "Last name is required"),
@@ -22,7 +24,10 @@ const getSchema = (isPhoneNumber:boolean) => {
           .regex(/^\+\d{12}$/, "Invalid international phone number format")
       : z.string().optional(),
     email: !isPhoneNumber
-      ? z.string().email("Invalid email address").min(1, "Email is required")
+      ? z
+          .string()
+          .email("Invalid email address")
+          .min(1, "Email is required")
       : z.string().optional(),
   });
 };
@@ -52,7 +57,7 @@ const RegisterPage = () => {
     }
   };
 
-  const onSubmit = async (data:any) => {
+  const onSubmit = async (data: any) => {
     const result = await signIn("credentials", {
       redirect: false,
       ...(data.phoneNumber

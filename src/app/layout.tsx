@@ -24,7 +24,7 @@ export default function RootLayout({
         <Providers>
           {/* <DefaultLayout> */}
           {children}
-          <ClientOnly/>
+          {/* <ClientOnly/> */}
           {/* </DefaultLayout> */}
         </Providers>
       </body>

@@ -7,7 +7,7 @@ import NextAuthProvider from "./NextAuthProvider";
 const Providers = ({ children }: PropsWithChildren) => {
   return (
     <NextAuthProvider>
-      <QueryClientProvider>{children}</QueryClientProvider>;
+      <QueryClientProvider>{children}</QueryClientProvider>
     </NextAuthProvider>
   );
 };

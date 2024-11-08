@@ -41,7 +41,7 @@ const Dashboardlayout = ({ children }: PropsWithChildren) => {
   const pathName = usePathname();
 
   return (
-    <div className="flex gap-16">
+    <div className="flex gap-16 min-h-screen ">
       <aside className="fixed flex h-full flex-col justify-between bg-primary pb-8 pl-14 pt-6">
         <div className="flex flex-col gap-y-12">
           <AppLogo className="[&>a]:text-white" />
@@ -76,7 +76,7 @@ const Dashboardlayout = ({ children }: PropsWithChildren) => {
         />
       </aside>
 
-      <main className="mt-16 flex w-full justify-end">{children}</main>
+      <main className="flex w-full justify-end">{children}</main>
     </div>
   );
 };

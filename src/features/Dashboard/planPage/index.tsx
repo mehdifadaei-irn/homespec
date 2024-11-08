@@ -13,6 +13,7 @@ const PlanPage = () => {
   const [sideDataItemClicked, setSideDataItemClicked] = useState<string | null>(
     null
   );
+  const [is3dModal, setIs3dModal] = useState<boolean>(false);
   const [sideDataList, setSideDataList] = useState<planSpaces[] | null>([
     {
       comments: 7,
@@ -104,11 +105,13 @@ const PlanPage = () => {
           >
             <HTabItem label="Ground Floor" value="Ground-Floor">
               <GroundFloor
+                setIs3dModal={setIs3dModal}
                 setSideDataList={setSideDataList}
                 setSideDataItemHovered={setSideDataItemHovered}
                 setSideDataItemClicked={setSideDataItemClicked}
                 sideDataItemClicked={sideDataItemClicked}
                 sideDataItemHovered={sideDataItemHovered}
+                is3dModal={is3dModal}
               />
             </HTabItem>
             <HTabItem label="First Floor" value="First-Floor">

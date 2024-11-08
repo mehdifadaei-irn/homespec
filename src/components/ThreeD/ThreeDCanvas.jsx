@@ -7,6 +7,8 @@ const ThreeDCanvas = ({
   setSideDataItemClicked,
   setSideDataItemHovered,
   setSideDataList,
+  setIs3dModal,
+  is3dModal
 }) => {
   const listMockData = [
     {

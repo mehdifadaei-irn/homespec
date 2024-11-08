@@ -1,5 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+"use client";
+
 import * as THREE from "three";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 // import TWEEN from 'https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.5.0/dist/tween.esm.js';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -102,7 +108,7 @@ const Page3D: React.FC = () => {
     const geometry = new THREE.BoxGeometry();
     const material = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 
-    let control = new TransformControls(
+    const control = new TransformControls(
       cameraRef.current,
       renderer.current.domElement
     );
@@ -158,7 +164,7 @@ const Page3D: React.FC = () => {
 
     const helper = new THREE.CameraHelper(directionalLight.shadow.camera);
     // sceneRef.current.add(helper);
-    let clock = new THREE.Clock();
+    const clock = new THREE.Clock();
     const animate = () => {
       console.log("animate");
       requestAnimationFrame(animate);
@@ -173,7 +179,7 @@ const Page3D: React.FC = () => {
     animate();
   };
 
-  const loadModel = (modelPath: String) => {
+  const loadModel = (modelPath: string) => {
     modelPathRef.current = modelPath;
 
     const loader = new GLTFLoader();

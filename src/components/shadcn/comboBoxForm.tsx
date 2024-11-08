@@ -55,7 +55,6 @@ export function ComboboxForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    s;
     toast({
       title: "You submitted the following values:",
       description: (

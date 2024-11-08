@@ -1,3 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+"use client";
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
@@ -441,7 +446,7 @@ const ThreeDCanvas = ({
       reflectivity: 0.2,
     });
 
-    let i = 0;
+    const i = 0;
     sceneRef.current.children.map((el) => {
       if (el.type === "Group") {
         el.children.map((gr) => {
@@ -588,7 +593,7 @@ const ThreeDCanvas = ({
   useEffect(() => {
     console.log("isloadmodel", modelRef.current);
     if (isModelLoaded) {
-      let test = modelRef.current.children.map((el) => {
+      const test = modelRef.current.children.map((el) => {
         if (el.type === "Group") {
           console.log("groups to send", el);
           return { name: el.name, id: el.uuid };

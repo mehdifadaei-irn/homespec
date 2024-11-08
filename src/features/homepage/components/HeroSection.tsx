@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import Image from "next/image";
 import heroImage from "@/features/homepage/assets/images/main-hero.webp";
-import ArrowDown from "@/features/homepage/assets/icons/benefits.calculator.svg";
+import ArrowDown from "@/features/homepage/assets/icons/arrow-down.svg";
 import RoundedSquare from "@/components/RoundedSquare";
 import HBtn from "@/components/ui-kit/HBtn";
 
 const HomePageHeroSection = () => {
-
   return (
     <section className="container relative mx-auto px-container">
       <div className="flex justify-end">
@@ -17,7 +16,7 @@ const HomePageHeroSection = () => {
             width={832}
             height={616}
           />
-          
+
           <RoundedSquare
             borderRadius={[0, 0, 0, 20]}
             variant="outline"
@@ -32,7 +31,7 @@ const HomePageHeroSection = () => {
             height={120}
             className="absolute -bottom-8 -right-12 flex cursor-pointer items-center justify-center"
           >
-            <Image src={ArrowDown} alt="arrow" width={23} height={23} />
+            <ArrowDown />
           </RoundedSquare>
         </div>
 

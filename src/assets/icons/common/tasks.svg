@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="18" viewBox="0 0 35 18">
+    <g id="Tasks" transform="translate(-2.393 1)">
+      <text id="_3_" data-name="3 !!!" transform="translate(20.393 13)" fill="#d6a217" font-size="10" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">3 !!!</tspan></text>
+      <g id="task" transform="translate(-0.732 -2.25)">
+        <path id="Path_1636" data-name="Path 1636" d="M8.839,12.613,6.531,10.369l-.906.881,3.214,3.125L14.625,8.75l-.906-.887Z" transform="translate(0 0.301)" fill="#354e37"/>
+        <path id="Path_1637" data-name="Path 1637" d="M15.852,3.179H13.943V2.536A1.279,1.279,0,0,0,12.67,1.25H7.58A1.279,1.279,0,0,0,6.307,2.536v.643H4.4A1.279,1.279,0,0,0,3.125,4.464v13.5A1.279,1.279,0,0,0,4.4,19.25H15.852a1.279,1.279,0,0,0,1.273-1.286V4.464A1.279,1.279,0,0,0,15.852,3.179ZM7.58,2.536H12.67V5.107H7.58Zm8.273,15.429H4.4V4.464H6.307V6.393h7.636V4.464h1.909Z" transform="translate(0 0)" fill="#354e37"/>
+      </g>
+    </g>
+  </svg>
+  

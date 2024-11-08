@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
@@ -6,17 +6,21 @@ const nextConfig: NextConfig = {
   },
   webpack(config) {
     config.module.rules.push({
-    test: /\.svg$/,
-    use: [
-      {
-        loader: "@svgr/webpack",
-        options: {
-          typescript: true, // Enable TypeScript support
+      test: /\.svg$/i,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
+  },
+  experimental: {
+    turbo: {
+      rules: {
+        "*.svg": {
+          loaders: ["@svgr/webpack"],
+          as: "*.js",
         },
       },
-    ],
-  });
-  return config;
+    },
   },
 };
 

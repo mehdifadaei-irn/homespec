@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { planSpaces } from "../index.types";
 import { ArrowRight2 } from "iconsax-react";
 import Tasks from "@/assets/icons/common/tasks.svg";
 import Earth from "@/assets/icons/common/earth.svg";
 import Comment from "@/assets/icons/common/comment.svg";
-import Image from "next/image";
 
 const sideDataList: planSpaces[] = [
   {
@@ -109,22 +107,19 @@ const RightSideBar = ({ setSideDataHovered }: Props) => {
                 <span className=" font-normal w-20">{item.name}</span>
                 <div className="flex  gap-x-1 flex-grow">
                   <div className="flex w-[80px] items-center gap-x-1">
-                    {/* <Tasks className={"h-6 w-6 scale-[0.81]"} /> */}
-                    <Image src={Tasks} width={23} height={23} alt="Tasks" />
+                    <Tasks width={18} height={18} />
                     <span className="text-sm text-secondary group-hover:text-white">
                       {item.val1} !!!
                     </span>
                   </div>
                   <div className="flex  items-center gap-x-1">
-                    {/* <Earth className={"h-6 w-6 scale-[0.81]"} /> */}
-                    <Image src={Earth} width={24} height={24} alt="Earh" />
+                    <Earth width={18} height={18} />
                     <span className="text-secondary group-hover:text-white">
                       {item.val1} !!!
                     </span>
                   </div>
                   <div className="flex w-[90px] items-center gap-x-1">
-                    {/* <Comment className={"h-6 w-6 scale-[0.81]"} /> */}
-                    <Image src={Comment} width={24} height={24} alt="Comment" />
+                    <Comment width={18} height={18} />
                     <span className="text-secondary group-hover:text-white">
                       {item.val1} !!!
                     </span>

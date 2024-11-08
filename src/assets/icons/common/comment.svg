@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="18.042" height="18" viewBox="0 0 18.042 18">
+    <g id="comment-outline" transform="translate(-46 -306.139)">
+      <path id="Path_1644" data-name="Path 1644" d="M16.225.139a1.753,1.753,0,0,1,1.289.528,1.7,1.7,0,0,1,.528,1.246V12.73a1.8,1.8,0,0,1-1.817,1.817H3.592L0,18.139V1.914A1.7,1.7,0,0,1,.528.667,1.753,1.753,0,0,1,1.817.139Zm0,12.592V1.914H1.817V14.547L3.592,12.73Z" transform="translate(46 306)" fill="#354e37"/>
+    </g>
+  </svg>
+  

@@ -49,13 +49,13 @@ const TheFooter = () => {
           </Link>
           <ul className="flex items-center gap-x-3">
             <li>
-              <Image src={LinkedinIcon} alt="linkedin" width={25} height={25} className="text-primary" />
+              <LinkedinIcon className="text-primary" />
             </li>
             <li>
-              <Image src={XIcon} alt="XIcon" width={25} height={25} className="text-primary" />
+              <XIcon className="text-primary" />
             </li>
             <li>
-              <Image src={FacebookIcon} alt="FacebookIcon" width={25} height={25} className="text-primary" />
+              <FacebookIcon className="text-primary" />
             </li>
           </ul>
         </div>

@@ -11,12 +11,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
+} from "@/components/shadcn/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/components/shadcn/popover";
 
 export interface OptionType {
   value: number;
@@ -31,7 +31,7 @@ interface HComboboxProps<T extends OptionType> {
   control?: any;
   rules?: any;
   onSearch?: (query: string) => void;
-  onChange?: (value: T) => void;
+  onChange?: (value: T| undefined) => void;
   loading?: boolean;
   disabled?: boolean;
   ui?: { label?: string };
@@ -126,9 +126,9 @@ export function HCombobox<T extends OptionType>({
                                   );
 
                                   field.onChange(
-                                    selectedValue.value === field.value
+                                    selectedValue?.value === field.value
                                       ? ""
-                                      : selectedValue.value,
+                                      : selectedValue?.value,
                                   );
 
                                   setOpen(false);

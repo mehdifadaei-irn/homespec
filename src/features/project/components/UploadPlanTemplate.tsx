@@ -8,7 +8,7 @@ const uploadApproaches = [
   { title: "Use Camera", id: 2, icon: "/icons/media/camera.svg" },
 ];
 
-const UploadPlanTemplate = ({ onSelectApproach }) => {
+const UploadPlanTemplate = ({ onSelectApproach }:any) => {
   const [targetApproach, setTargetApproach] = React.useState<number | null>(
     null,
   );

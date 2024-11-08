@@ -7,11 +7,11 @@ import HInput from "@/components/ui-kit/form/HInput";
 import { useState } from "react";
 import HPhoneNumberInput from "@/components/ui-kit/form/HPhoneNumberInput";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 const getSchema = (isPhoneNumber: boolean) => {
   return z.object({

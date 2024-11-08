@@ -1,5 +1,5 @@
 import qs from "qs";
-import { api } from "@/lib/api";
+import { httpService } from "@/lib/httpService";
 
 export interface CountriesPayload {
   filters?: {
@@ -55,19 +55,19 @@ export interface CitiesPayload {
 
 export const getCountries = (payload?: CountriesPayload) => {
   const query = qs.stringify(payload, { encodeValuesOnly: true });
-  return api.get(`/world/countries?${query}`);
+  return httpService.get(`/world/countries?${query}`);
 };
 
 export const getStatesByCountry = (payload?: StatesPayload) => {
   const query = qs.stringify(payload, { encodeValuesOnly: true });
-  return api.get(`/world/states?${query}`);
+  return httpService.get(`/world/states?${query}`);
 };
 
 export const getCitiesByState = (payload?: CitiesPayload) => {
   const query = qs.stringify(payload, { encodeValuesOnly: true });
-  return api.get(`/world/cities?${query}`);
+  return httpService.get(`/world/cities?${query}`);
 };
 
-export const createUserAddress = (payload) => {
-  return api.post(`/users/addresses`, payload);
+export const createUserAddress = (payload:any) => {
+  return httpService.post(`/users/addresses`, payload);
 };

@@ -8,10 +8,10 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const getSchema = (isPhoneNumber) => {
+const getSchema = (isPhoneNumber:boolean) => {
   return z.object({
     firstName: z.string().min(1, "First name is required"),
     lastName: z.string().min(1, "Last name is required"),
@@ -52,7 +52,7 @@ const RegisterPage = () => {
     }
   };
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data:any) => {
     const result = await signIn("credentials", {
       redirect: false,
       ...(data.phoneNumber
@@ -65,7 +65,7 @@ const RegisterPage = () => {
     if (result?.ok) {
       router.push("/");
     } else {
-      console.error("Login failed:", result.error);
+      console.error("Login failed:", result?.error);
     }
   };
 

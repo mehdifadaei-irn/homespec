@@ -11,7 +11,7 @@ const PlanPage = () => {
   return (
     <div className="w-full pl-[303px]">
       <div className="flex min-h-screen bg-[#F6F6F6]">
-        <section className="w-[71%]">
+        <section className="flex-grow">
           <HTab
             defaultValue="Ground-Floor"
             ui={{ content: "bg-transparent p-0" }}
@@ -27,7 +27,7 @@ const PlanPage = () => {
             </HTabItem>
           </HTab>
         </section>
-        <section className="w-[29%]">
+        <section className="w-[420px]">
           <RightSideBar setSideDataHovered={setSideDataHovered} />
         </section>
       </div>

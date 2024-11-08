@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import GalleryIcon from "/public/icons/media/gallery.svg";
 
 interface ProjectStyleGalleryListItemProps {
   image: string;
@@ -26,7 +25,7 @@ const ProjectStyleGalleryListItem = ({
         <h3 className="text-lg font-bold">{title}</h3>
         <div className="flex items-center gap-x-2.5">
           <p className="text-xs font-bold text-primary">{count}</p>
-          <GalleryIcon />
+          <Image src={"/icons/media/gallery.svg"} alt="Gallery" width={26} height={26} />
         </div>
       </div>
     </div>

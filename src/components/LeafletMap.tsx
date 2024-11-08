@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
@@ -67,7 +68,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({ lat, lng }) => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={center} />
+          {/* <Marker position={center} /> */}
           {!loading && lat && lng && <MapCenter lat={lat} lng={lng} />}
         </MapContainer>
       </div>

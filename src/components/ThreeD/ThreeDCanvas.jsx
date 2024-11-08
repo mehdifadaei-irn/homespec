@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 
 const ThreeDCanvas = ({
@@ -5,8 +6,7 @@ const ThreeDCanvas = ({
   sideDataItemClicked,
   setSideDataItemClicked,
   setSideDataItemHovered,
-  // setSideDataList,
-  // put an state for list
+  setSideDataList,
 }) => {
   const listMockData = [
     {
